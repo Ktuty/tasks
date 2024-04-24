@@ -22,6 +22,7 @@ func main() {
 	for value != -1 {
 		_, err := fmt.Scan(&value)
 		if err != nil {
+			fmt.Printf("Некорректное число %v\n", err)
 			break
 		}
 		fmt.Println(sclone(value))
