@@ -5,6 +5,9 @@ import "fmt"
 func sclone(value int) string {
 	point := value % 10
 
+	if value == 11 || value == 12 || value == 13 || value == 14 {
+		return fmt.Sprintf("%d компьютеров", value)
+	}
 	switch point {
 	case 0, 5, 6, 7, 8, 9:
 		return fmt.Sprintf("%d компьютеров", value)
