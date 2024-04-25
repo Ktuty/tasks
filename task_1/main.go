@@ -4,8 +4,9 @@ import "fmt"
 
 func sclone(value int) string {
 	point := value % 10
+	hpoint := value % 100
 
-	if value == 11 || value == 12 || value == 13 || value == 14 {
+	if hpoint == 11 || hpoint == 12 || hpoint == 13 || hpoint == 14 {
 		return fmt.Sprintf("%d компьютеров", value)
 	}
 	switch point {
