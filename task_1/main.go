@@ -3,12 +3,17 @@ package main
 import "fmt"
 
 func sclone(value int) string {
+	if value < 0 {
+		return "отрицательных компьютеров быть не может!"
+	}
+
 	point := value % 10
 	hpoint := value % 100
 
 	if hpoint == 11 || hpoint == 12 || hpoint == 13 || hpoint == 14 {
 		return fmt.Sprintf("%d компьютеров", value)
 	}
+
 	switch point {
 	case 0, 5, 6, 7, 8, 9:
 		return fmt.Sprintf("%d компьютеров", value)
@@ -18,7 +23,7 @@ func sclone(value int) string {
 		return fmt.Sprintf("%d компьютера", value)
 	}
 
-	return "отрицательных компьютеров быть не может!"
+	return "Не могу обработать!"
 }
 
 func main() {
